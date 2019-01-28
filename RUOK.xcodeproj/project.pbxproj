@@ -13,9 +13,11 @@
 		457C70D721FED68500F6DB1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457C70D621FED68500F6DB1C /* Assets.xcassets */; };
 		457C70DA21FED68500F6DB1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457C70D821FED68500F6DB1C /* LaunchScreen.storyboard */; };
 		457C70DD21FED68500F6DB1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C70DC21FED68500F6DB1C /* main.m */; };
+		B69BB02CA07BCBE0606F5FDE /* libPods-RUOK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B6AA0E7C582379CB895B5A /* libPods-RUOK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BDEA3656DADA80F79C173F2 /* Pods-RUOK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUOK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUOK/Pods-RUOK.debug.xcconfig"; sourceTree = "<group>"; };
 		457C70CA21FED68300F6DB1C /* RUOK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RUOK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457C70CD21FED68300F6DB1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		457C70CE21FED68300F6DB1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		457C70D921FED68500F6DB1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		457C70DB21FED68500F6DB1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457C70DC21FED68500F6DB1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49B6AA0E7C582379CB895B5A /* libPods-RUOK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RUOK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C54B05284F65DE73F70912E /* Pods-RUOK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUOK.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUOK/Pods-RUOK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69BB02CA07BCBE0606F5FDE /* libPods-RUOK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				457C70CC21FED68300F6DB1C /* RUOK */,
 				457C70CB21FED68300F6DB1C /* Products */,
+				963AC3977BEABB6CC4D261E7 /* Pods */,
+				8469370D100603640467117C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			path = RUOK;
 			sourceTree = "<group>";
 		};
+		8469370D100603640467117C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49B6AA0E7C582379CB895B5A /* libPods-RUOK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		963AC3977BEABB6CC4D261E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BDEA3656DADA80F79C173F2 /* Pods-RUOK.debug.xcconfig */,
+				9C54B05284F65DE73F70912E /* Pods-RUOK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 457C70E021FED68500F6DB1C /* Build configuration list for PBXNativeTarget "RUOK" */;
 			buildPhases = (
+				DF691CACA76972F885AC3350 /* [CP] Check Pods Manifest.lock */,
 				457C70C621FED68300F6DB1C /* Sources */,
 				457C70C721FED68300F6DB1C /* Frameworks */,
 				457C70C821FED68300F6DB1C /* Resources */,
@@ -135,6 +160,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF691CACA76972F885AC3350 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RUOK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		457C70C621FED68300F6DB1C /* Sources */ = {
@@ -283,6 +333,7 @@
 		};
 		457C70E121FED68500F6DB1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BDEA3656DADA80F79C173F2 /* Pods-RUOK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +350,7 @@
 		};
 		457C70E221FED68500F6DB1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C54B05284F65DE73F70912E /* Pods-RUOK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
